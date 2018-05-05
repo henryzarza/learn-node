@@ -1,0 +1,6 @@
+extends layout
+
+block content
+    .wrapper
+        p.hello Hello my name is #{person.name} my dog is #{person.dog.toUpperCase()}
+        img.dog(src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Dogge_Odin.jpg/245px-Dogge_Odin.jpg" alt=`${person.dog}` title=`${person.dog}`)
