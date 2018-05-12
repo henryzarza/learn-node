@@ -4,6 +4,5 @@ exports.myMiddleware = (req, res, next) => {
 }
 
 exports.homePage = (req, res) => {
-    const person = { name: req.name, dog: 'Ruphus' };
-    res.render('index', {person, title: 'Home'});
+    res.render('index', {name: req.name, title: 'Home'});
 }
