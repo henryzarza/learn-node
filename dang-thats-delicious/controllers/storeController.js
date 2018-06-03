@@ -1,8 +1,11 @@
-exports.myMiddleware = (req, res, next) => {
-    req.name = 'Beyoncé';
-    next();
+exports.homePage = (req, res) => {
+    res.render('index', { name: 'Beyoncé', title: 'Home' });
 }
 
-exports.homePage = (req, res) => {
-    res.render('index', {name: req.name, title: 'Home'});
+exports.addStore = (req, res) => {
+    res.render('editStore', { title: 'Add Store' });
+}
+
+exports.createStore = (req, res) => {
+    res.json(req.body);
 }
